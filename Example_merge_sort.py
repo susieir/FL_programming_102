@@ -1,4 +1,12 @@
 """ Merge sort example"""
+from timeit import timeit
+from random import randint
+
+# Generate random list
+list_to_sort = [randint(0, 1000) for i in range(1000)]
+
+############################################################################################
+
 
 def merge(list_a, list_b):
     list_c = []
@@ -28,5 +36,4 @@ def merge_sort(unsorted):
     return merge(front, back)
 
 
-my_list = [5,4,3,2,1]
 merge_sort(my_list)
